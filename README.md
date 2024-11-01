@@ -1,1 +1,4 @@
 # LLM
+## Secrets ##
+1) TOGETHER_API_KEY
+2) API_PASSWORD
