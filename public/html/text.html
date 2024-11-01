@@ -1,0 +1,57 @@
+<!-- public/text.html -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Text Generation</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="/text">Text Generation</a>
+      <a href="/image">Image Generation</a>
+      <a href="/settings">Settings</a>
+    </nav>
+
+    <h1>Text Generation</h1>
+
+    <div class="container">
+      <label for="model-select">Choose Model:</label>
+      <select id="model-select">
+        <!-- Options populated dynamically -->
+      </select>
+    </div>
+
+    <div class="container">
+      <label for="text-prompt">Enter your prompt:</label>
+      <textarea
+        id="text-prompt"
+        rows="4"
+        placeholder="Type your prompt here..."
+      ></textarea>
+    </div>
+
+    <div class="container">
+      <label for="password-input">Enter Password:</label>
+      <input
+        type="password"
+        id="password-input"
+        placeholder="Enter your password here..."
+      />
+      <button id="submit-password">Submit</button>
+    </div>
+
+    <button id="generate-text" disabled>Generate Text</button>
+
+    <div class="container response-container">
+      <h2>Response:</h2>
+      <pre id="text-response"></pre>
+      <div class="copy-download-buttons">
+        <button class="copy" id="copy-text">Copy</button>
+        <button class="download" id="download-text">Download</button>
+      </div>
+    </div>
+
+    <script src="js/text.js"></script>
+  </body>
+</html>

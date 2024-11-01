@@ -1,0 +1,87 @@
+<!-- public/settings.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Settings</title>
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-9ndCyUaI0YbVmXQthP8CqRmoQe6I1kCc6jTuwLBGRpIT0jy1kM4uC5+g8dPfRogN"
+    crossorigin="anonymous"
+  >
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">AI Generator</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="/text">Text Generation</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/image">Image Generation</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/settings">Settings</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>Settings</h1>
+
+    <div class="mb-4">
+      <h2>Reset Chat History</h2>
+      <button id="reset-chat-text" class="btn btn-danger me-2">Reset Text Chat History</button>
+      <button id="reset-chat-image" class="btn btn-danger">Reset Image Chat History</button>
+    </div>
+
+    <div>
+      <h2>Customize Settings</h2>
+      <form id="custom-settings-form">
+        <h3>Image Settings</h3>
+        <div class="mb-3">
+          <label for="image-width" class="form-label">Image Width:</label>
+          <input type="number" class="form-control" id="image-width" name="imageWidth" min="100" max="4096" step="1" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="image-height" class="form-label">Image Height:</label>
+          <input type="number" class="form-control" id="image-height" name="imageHeight" min="100" max="4096" step="1" required>
+        </div>
+
+        <h3>Model Selection</h3>
+        <div class="mb-3">
+          <label for="text-model-select" class="form-label">Select Text Model:</label>
+          <select class="form-select" id="text-model-select" name="textModel" required>
+            <!-- Options populated dynamically -->
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label for="image-model-select" class="form-label">Select Image Model:</label>
+          <select class="form-select" id="image-model-select" name="imageModel" required>
+            <!-- Options populated dynamically -->
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Save Settings</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS Bundle with Popper -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+Xc9pJ4Uv1Bx13x6X0/Jh4nQBSIh9"
+    crossorigin="anonymous"
+  ></script>
+  <script src="js/settings.js"></script>
+</body>
+</html>

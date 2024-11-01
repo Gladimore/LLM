@@ -1,0 +1,95 @@
+<!-- public/image.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image Generation</title>
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-9ndCyUaI0YbVmXQthP8CqRmoQe6I1kCc6jTuwLBGRpIT0jy1kM4uC5+g8dPfRogN"
+    crossorigin="anonymous"
+  >
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">AI Generator</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="/text">Text Generation</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/image">Image Generation</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/settings">Settings</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>Image Generation</h1>
+
+    <div class="mb-4">
+      <label for="model-select-image" class="form-label">Choose Model:</label>
+      <select class="form-select" id="model-select-image" required>
+        <!-- Options populated dynamically -->
+      </select>
+    </div>
+
+    <div class="mb-4">
+      <label for="image-prompt" class="form-label">Enter your prompt:</label>
+      <textarea class="form-control" id="image-prompt" rows="4" placeholder="Type your prompt here..." required></textarea>
+    </div>
+
+    <div class="mb-4">
+      <label for="image-width" class="form-label">Image Width:</label>
+      <input type="number" class="form-control" id="image-width" min="100" max="4096" step="1" required>
+    </div>
+
+    <div class="mb-4">
+      <label for="image-height" class="form-label">Image Height:</label>
+      <input type="number" class="form-control" id="image-height" min="100" max="4096" step="1" required>
+    </div>
+
+    <div class="mb-4">
+      <label for="password-input-image" class="form-label">Enter Password:</label>
+      <div class="input-group">
+        <input type="password" class="form-control" id="password-input-image" placeholder="Enter your password here..." required>
+        <button class="btn btn-primary" id="submit-password-image">Submit</button>
+      </div>
+    </div>
+
+    <button class="btn btn-success mb-4" id="generate-image" disabled>Generate Image</button>
+
+    <div class="response-container">
+      <h2>Generated Images:</h2>
+      <div id="image-container"></div>
+      <div class="copy-download-buttons">
+        <button class="btn btn-primary btn-sm copy" id="copy-image-url">Copy</button>
+        <button class="btn btn-success btn-sm download" id="download-image">Download</button>
+      </div>
+      <div id="loading-image" class="text-center my-3" style="display: none;">
+        <div class="spinner-border text-primary" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <p>Generating image...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS Bundle with Popper -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+Xc9pJ4Uv1Bx13x6X0/Jh4nQBSIh9"
+    crossorigin="anonymous"
+  ></script>
+  <script src="js/image.js"></script>
+</body>
+</html>
