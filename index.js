@@ -51,8 +51,8 @@ fs.watchFile(
 
 // Rate Limiter for password attempts
 const passwordLimiter = rateLimit({
-  windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 10, // limit each IP to 5 password attempts per windowMs
+  windowMs: 10 * 60 * 1000, // 10 minutes
+  max: 30, // limit each IP to 5 password attempts per windowMs
   message:
     "Too many password attempts from this IP, please try again after 15 minutes",
 });
