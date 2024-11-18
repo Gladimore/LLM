@@ -156,7 +156,6 @@ app.post(
         top_k: 50,
         repetition_penalty: 1,
         stop: selectedModel.stop,
-        truncate: 130560,
         stream: false, // Set to false to simplify response handling
       });
 
