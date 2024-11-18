@@ -3,6 +3,10 @@
     {
       "name": "meta-llama/Llama-Vision-Free",
       "stop": ["<|eot_id|>", "<|eom_id|>"]
+    },
+    {
+      "name": "meta-llama/Meta-Llama-3-8B-Instruct-Lite".
+      "stop": ["<|eot_id|>"
     }
   ],
   "imageModels": [
