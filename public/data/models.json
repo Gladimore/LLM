@@ -1,14 +1,8 @@
 {
   "textModels": [
-    {
-      "name": "meta-llama/Llama-Vision-Free",
-      "stop": ["<|eot_id|>", "<|eom_id|>"]
-    }
+    "meta-llama/Llama-Vision-Free"
   ],
   "imageModels": [
-    {
-      "name": "black-forest-labs/FLUX.1-schnell-Free",
-      "stop": []
-    }
+    "black-forest-labs/FLUX.1-schnell-Free"
   ]
 }
