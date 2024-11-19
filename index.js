@@ -155,7 +155,6 @@ app.post(
         top_p: 0.7,
         top_k: 50,
         repetition_penalty: 1,
-        stop: selectedModel.stop,
         stream: false, // Set to false to simplify response handling
       });
 
