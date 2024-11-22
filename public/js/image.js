@@ -8,7 +8,7 @@ const fetchModels = async () => {
     const response = await fetch('/api/models');
     const data = await response.json();
 
-    populateModelSelect('model-select-image', data.imageModels.map(m => m.name));
+    populateModelSelect('model-select-image', data.imageModels);
     loadCustomSettingsImage();
   } catch (error) {
     console.error('Error fetching models:', error);
