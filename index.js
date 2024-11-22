@@ -119,7 +119,7 @@ app.post(
 
     // Verify model is allowed
     const selectedModel = allowedModels.textModels.find(
-      (m) => m.name === model,
+      (m) => m === model,
     );
     if (!selectedModel) {
       return res
@@ -189,7 +189,7 @@ app.post(
 
     // Verify model is allowed
     const selectedModel = allowedModels.imageModels.find(
-      (m) => m.name === model,
+      (m) => m === model,
     );
     if (!selectedModel) {
       return res.status(400).json({
